@@ -26,8 +26,8 @@ const Events = () => {
     id: 1,
     title: "Special Healing & Miracle Service",
     description: "Join us for a powerful night of healing, deliverance, and supernatural breakthroughs. Bishop Isaiah Moturi will be ministering with special prayers for the sick and those seeking God's intervention.",
-    date: "Sunday, February 11th, 2024",
-    time: "6:00 PM - 9:00 PM",
+    date: "Sunday, July 3rd, 2025",
+    time: "9:00 AM - 13:00 PM",
     location: "Mukuru Kwa Njenga Church Premises",
     type: "Special Event"
   };

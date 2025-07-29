@@ -99,7 +99,7 @@ const Ministry = () => {
             </div>
             <div>
               <h4 className="font-inter font-semibold text-xl mb-2">Prayer Meeting</h4>
-              <p className="opacity-80">Wednesday 6:00 PM</p>
+              <p className="opacity-80">Wednesday 2:00 PM</p>
             </div>
             <div>
               <h4 className="font-inter font-semibold text-xl mb-2">Bible Study</h4>
