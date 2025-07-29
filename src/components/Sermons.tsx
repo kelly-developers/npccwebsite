@@ -29,9 +29,6 @@ const Sermons = () => {
       >
         <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-0"></div>
         <div className="text-center text-white z-10 p-6">
-          <h3 className="font-playfair text-3xl font-bold mb-3">
-            Nabii Powerful Christian Church
-          </h3>
           <p className="font-inter text-lg opacity-90 mb-6">
             Visit our YouTube channel for live services and sermon archives
           </p>
