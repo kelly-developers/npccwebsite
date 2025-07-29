@@ -30,7 +30,7 @@ const Sermons = () => {
         <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-0"></div>
         <div className="text-center text-white z-10 p-6">
           <p className="font-inter text-lg opacity-90 mb-6">
-            Visit our YouTube channel for live services and sermon archives
+            Visit our YouTube channel for live services and Sermons
           </p>
           <Button
             variant="secondary"
