@@ -23,47 +23,96 @@ const Videos = () => {
   const shortVideos = [
     {
       id: 1,
-      title: "Daily Prayer Inspiration",
-      description: "Start your day with powerful prayer",
-      duration: "2:30",
+      title: "Mchawi anayepinga masomo, ndoa, kazi, na biashara",
+      description: "Anayesababisha magonjwa ya miguu, shinikizo la damu, kisukari, na aliyeuua mama yake aokoka",
+      duration: "8:52",
       youtubeUrl: "https://www.youtube.com/watch?v=DVSK8W6TRsU",
     },
     {
       id: 2,
-      title: "Healing Testimonies",
-      description: "Witness God's healing power",
-      duration: "3:15",
-      youtubeUrl: "https://www.youtube.com/shorts/J0wAGObk4o0",
+      title: "Ukombozi Kutoka roho za Ushago",
+      description: "waliofungwa na roho za ushago waokoka na kupokea wokovu",
+      duration: "25:34",
+      youtubeUrl: "https://www.youtube.com/watch?v=QGKpDB7pw7s",
     },
+
     {
       id: 3,
-      title: "Bishop's Message",
-      description: "Weekly word from Bishop Isaiah",
-      duration: "5:00",
-      youtubeUrl: "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
+      title: "Roho ya Kutoendelea Yaondolewa",
+      description: "Shuhudia ukombozi kutoka roho ya kutoendelea na ushuhuda wa wokovu",
+      duration: "23:46",
+      youtubeUrl: "https://www.youtube.com/watch?v=njUxvnAhd_k",
     },
-    {
-      id: 4,
-      title: "Community Outreach",
-      description: "Our work in Mukuru Kwa Njenga",
-      duration: "4:20",
-      youtubeUrl: "https://www.youtube.com/watch?v=oHg5SJYRHA0",
-    },
-    {
-      id: 5,
-      title: "Youth Ministry",
-      description: "Empowering the next generation",
-      duration: "3:45",
-      youtubeUrl: "https://www.youtube.com/watch?v=ZZ5LpwO-An4",
-    },
-    {
-      id: 6,
-      title: "Worship Moments",
-      description: "Experience our powerful worship",
-      duration: "2:50",
-      youtubeUrl: "https://www.youtube.com/watch?v=y6120QOlsfU",
-    },
+    // {
+    //   id: 4,
+    //   title: "Community Outreach",
+    //   description: "Our work in Mukuru Kwa Njenga",
+    //   duration: "25:54",
+    //   youtubeUrl: "https://www.youtube.com/watch?v=iDSljV5Ve3U",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Youth Ministry",
+    //   description: "Empowering the next generation",
+    //   duration: "3:45",
+    //   youtubeUrl: "https://www.youtube.com/watch?v=iDSljV5Ve3U",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Worship Moments",
+    //   description: "Experience our powerful worship",
+    //   duration: "2:50",
+    //   youtubeUrl: "https://www.youtube.com/watch?v=NUHxKIt_FhA",
+    // },
   ];
+
+
+
+
+
+
+
+
+
+
+
+
+// const shortVideos = [
+//   {
+//     id: 1,
+//     title: "Daily Prayer Inspiration",
+//     youtubeUrl: "https://www.youtube.com/watch?v=DVSK8W6TRsU",
+//   },
+//   {
+//     id: 2,
+//     title: "Healing Testimonies",
+//     
+//   },
+//   {
+//     id: 3,
+//     title: "Bishop's Message",
+//     youtubeUrl: "",
+//   },
+//   {
+//     id: 4,
+//     title: "Community Outreach",
+    
+//   },
+//   {
+//     id: 5,
+//     title: "Youth Ministry",
+//     
+//   },
+//   {
+//     id: 6,
+//     title: "Worship Moments",
+//     
+//   },
+// ];
+
+
+
+
 
   return (
     <section className="py-20 bg-background">
@@ -138,7 +187,7 @@ const Videos = () => {
             className="font-inter"
             onClick={() =>
               window.open(
-                "https://www.youtube.com/@nabiipowerfulchristian",
+                "https://www.youtube.com/@nabiipowerfulchristianchur9592",
                 "_blank"
               )
             }

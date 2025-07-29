@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import youtubeChannelImage from "@/assets/youtubechannelpart.jpg"; 
 
 const Sermons = () => {
   return (
@@ -16,128 +17,103 @@ const Sermons = () => {
           </p>
         </div>
 
-        {/* YouTube Channel Section */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <Card className="overflow-hidden shadow-divine">
-            <CardContent className="p-0">
-              {/* YouTube Video Placeholder */}
-              <div className="relative aspect-video bg-gradient-divine flex items-center justify-center">
-                <div className="text-center text-primary-foreground">
-                  <div className="text-6xl mb-4">📺</div>
-                  <h3 className="font-playfair text-3xl font-bold mb-3">
-                    Nabii Powerful Christian Church
-                  </h3>
-                  <p className="font-inter text-lg opacity-90 mb-6">
-                    Visit our YouTube channel for live services and sermon archives
-                  </p>
-                  <Button 
-                    variant="secondary" 
-                    size="lg" 
-                    className="font-inter px-8"
-                    onClick={() => window.open('https://www.youtube.com/@nabiipowerfulchristian', '_blank')}
-                  >
-                    Watch on YouTube
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+{/* YouTube Channel Section */}
+<div className="max-w-4xl mx-auto mb-16">
+  <Card className="overflow-hidden shadow-divine">
+    <CardContent className="p-0">
+      <div
+        className="relative aspect-video bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${youtubeChannelImage})`,
+        }}
+      >
+        <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-0"></div>
+        <div className="text-center text-white z-10 p-6">
+          <h3 className="font-playfair text-3xl font-bold mb-3">
+            Nabii Powerful Christian Church
+          </h3>
+          <p className="font-inter text-lg opacity-90 mb-6">
+            Visit our YouTube channel for live services and sermon archives
+          </p>
+          <Button
+            variant="secondary"
+            size="lg"
+            className="font-inter px-8"
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/@nabiipowerfulchristianchur9592",
+                "_blank"
+              )
+            }
+          >
+            Watch on YouTube
+          </Button>
         </div>
+      </div>
+    </CardContent>
+  </Card>
+</div>
+
 
         {/* Featured Sermons */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <Card className="shadow-blessing hover:shadow-divine transition-all duration-300">
-            <CardHeader>
-              <div className="aspect-video bg-gradient-divine rounded-lg flex items-center justify-center mb-4">
-                <div className="text-primary-foreground text-center">
-                  <div className="text-4xl mb-2">🎥</div>
-                  <p className="font-inter text-sm">Recent Sermon</p>
+          {[
+            {
+              title: "Ujasiri wa kusimama kwa ajili ya haki",
+              description:
+                "Bishop Isaiah Moturi delivers a powerful message on the courage to stand for truth and justice. Through bold faith and unwavering conviction, he reveals how standing up for righteousness activates divine healing, breakthrough, and restoration in our lives.",
+              videoId: "3rcoBTQZPNA",
+              date: "July 27, 2025",
+              tag: "Recent Sermon",
+            },
+            {
+              title: "Mungu anatoa vipaji kulingana na matendo",
+              description:
+                "This message explores how God gives gifts based on our actions and faithfulness. Bishop teaches that our obedience and service open doors for divine empowerment and spiritual gifts.",
+              videoId: "xxhaDvQVT-A",
+              
+              date: "July 27, 2025",
+              tag: "Popular Sermon",
+            },
+            {
+              title: "Kutumaini Mungu",
+              description:
+                "In this inspiring message, Bishop Easter encourages believers to place their full trust in God, even in uncertain times. Discover the power of unwavering faith and how God's promises never fail those who rely on Him.",
+              videoId: "5oSnpv9UO9Y",
+              
+              date: "July 20, 2025",
+              tag: "Featured Sermon",
+            },
+          ].map((sermon, index) => (
+            <Card
+              key={index}
+              className="shadow-blessing hover:shadow-divine transition-all duration-300"
+            >
+              <CardHeader>
+                <div className="aspect-video rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.youtube.com/embed/${sermon.videoId}`}
+                    title={sermon.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-              </div>
-              <CardTitle className="font-playfair text-xl">
-                The Power of Faith in Healing
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="font-inter text-muted-foreground text-sm mb-4">
-                Bishop Isaiah Moturi shares powerful insights on how faith activates 
-                God's healing power in our lives.
-              </p>
-              <div className="flex justify-between items-center text-sm text-muted-foreground mb-4">
-                <span>Duration: 45 min</span>
-                <span>Jan 15, 2024</span>
-              </div>
-              <Button 
-                variant="outline" 
-                className="w-full font-inter"
-                onClick={() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
-              >
-                Watch Sermon
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-blessing hover:shadow-divine transition-all duration-300">
-            <CardHeader>
-              <div className="aspect-video bg-gradient-blessing rounded-lg flex items-center justify-center mb-4">
-                <div className="text-secondary-foreground text-center">
-                  <div className="text-4xl mb-2">🎥</div>
-                  <p className="font-inter text-sm">Popular Sermon</p>
+                <CardTitle className="font-playfair text-xl">
+                  {sermon.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="font-inter text-muted-foreground text-sm mb-4">
+                  {sermon.description}
+                </p>
+                <div className="flex justify-between items-center text-sm text-muted-foreground mb-4">
+                  
+                  <span>{sermon.date}</span>
                 </div>
-              </div>
-              <CardTitle className="font-playfair text-xl">
-                Transformation Through Christ
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="font-inter text-muted-foreground text-sm mb-4">
-                A life-changing message about how Jesus transforms hearts, minds, 
-                and circumstances for His glory.
-              </p>
-              <div className="flex justify-between items-center text-sm text-muted-foreground mb-4">
-                <span>Duration: 52 min</span>
-                <span>Jan 8, 2024</span>
-              </div>
-              <Button 
-                variant="outline" 
-                className="w-full font-inter"
-                onClick={() => window.open('https://www.youtube.com/watch?v=9bZkp7q19f0', '_blank')}
-              >
-                Watch Sermon
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-blessing hover:shadow-divine transition-all duration-300">
-            <CardHeader>
-              <div className="aspect-video bg-gradient-divine rounded-lg flex items-center justify-center mb-4">
-                <div className="text-primary-foreground text-center">
-                  <div className="text-4xl mb-2">🎥</div>
-                  <p className="font-inter text-sm">Featured Sermon</p>
-                </div>
-              </div>
-              <CardTitle className="font-playfair text-xl">
-                Walking in Divine Purpose
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="font-inter text-muted-foreground text-sm mb-4">
-                Discover God's unique plan for your life and how to walk boldly 
-                in your divine calling and purpose.
-              </p>
-              <div className="flex justify-between items-center text-sm text-muted-foreground mb-4">
-                <span>Duration: 38 min</span>
-                <span>Jan 1, 2024</span>
-              </div>
-              <Button 
-                variant="outline" 
-                className="w-full font-inter"
-                onClick={() => window.open('https://www.youtube.com/watch?v=fJ9rUzIMcZQ', '_blank')}
-              >
-                Watch Sermon
-              </Button>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Live Services Schedule */}
