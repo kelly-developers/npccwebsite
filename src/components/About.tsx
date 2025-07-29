@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import bishopImage from "@/assets/bishop-isaiah.jpg";
 import childrenImage from "@/assets/children-education.jpg";
 import worshipImage from "@/assets/worship-healing.jpg";
+import youthImage from "@/assets/youth.jpg";
+import seniorImage from "@/assets/senior.jpg";
 
 const About = () => {
   const [currentBishopImage, setCurrentBishopImage] = useState(0);
@@ -10,7 +12,9 @@ const About = () => {
   const bishopImages = [
     { src: bishopImage, alt: "Senior Bishop Isaiah Moturi" },
     { src: childrenImage, alt: "Bishop with Children Ministry" },
-    { src: worshipImage, alt: "Bishop During Worship" }
+    { src: worshipImage, alt: "Bishop During Worship" },
+    { src: youthImage, alt: "youth image" },
+    { src: seniorImage, alt: "senior image" }
   ];
 
   useEffect(() => {

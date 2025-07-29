@@ -7,11 +7,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
+import { MapPin } from "lucide-react";
+
 import heroImage from "@/assets/church-hero.jpg";
 import bishopImage from "@/assets/bishop-isaiah.jpg";
 import childrenImage from "@/assets/children-education.jpg";
 import worshipImage from "@/assets/worship-healing.jpg";
-import communityImage from "@/assets/community-service.jpg";
+import youthImage from "@/assets/youth.jpg";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -21,7 +23,7 @@ const Hero = () => {
     { src: bishopImage, alt: "Bishop Isaiah Moturi" },
     { src: childrenImage, alt: "Children Education" },
     { src: worshipImage, alt: "Worship and Healing" },
-    { src: communityImage, alt: "Community Service" },
+    { src: youthImage, alt: "youth image" },
   ];
 
   useEffect(() => {
@@ -47,7 +49,7 @@ const Hero = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary-glow/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/60 to-primary-glow/30"></div>
       </div>
 
       {/* Content */}
@@ -84,11 +86,14 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Church Location */}
+        {/* Church Location with Icon */}
         <div className="mt-10 sm:mt-12 text-primary-foreground/80">
-          <p className="font-inter text-sm sm:text-base md:text-lg">
-            📍 Mukuru Kwa Njenga, Nairobi, Kenya
-          </p>
+          <div className="flex items-center justify-center text-muted-foreground">
+            <MapPin className="h-5 w-5 mr-2 text-primary" />
+            <p className="font-inter text-sm sm:text-base md:text-lg">
+              Mukuru Kwa Njenga, Nairobi, Kenya
+            </p>
+          </div>
         </div>
       </div>
 
